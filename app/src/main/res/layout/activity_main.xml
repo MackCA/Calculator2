@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/titleTextView"
+        android:layout_width="266dp"
+        android:layout_height="70dp"
+        android:text="Calculate the Mass of a Star"
+        android:textAlignment="center"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.096" />
+
+    <EditText
+        android:id="@+id/orbitalPeriodTextBox"
+        android:layout_width="wrap_content"
+        android:layout_height="50dp"
+        android:layout_marginStart="101dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="101dp"
+        android:layout_marginBottom="32dp"
+        android:ems="10"
+        android:hint="9.072"
+        android:inputType="numberDecimal"
+        app:layout_constraintBottom_toTopOf="@+id/orTextView"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/opTextView" />
+
+    <EditText
+        android:id="@+id/orbitalRadiusTextBox"
+        android:layout_width="wrap_content"
+        android:layout_height="50dp"
+        android:layout_marginStart="101dp"
+        android:layout_marginTop="13dp"
+        android:layout_marginEnd="101dp"
+        android:layout_marginBottom="32dp"
+        android:ems="10"
+        android:hint="7.20"
+        android:inputType="numberDecimal"
+        app:layout_constraintBottom_toTopOf="@+id/calculateButton"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/orTextView" />
+
+    <TextView
+        android:id="@+id/opTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="108dp"
+        android:layout_marginTop="24dp"
+        android:layout_marginEnd="109dp"
+        android:layout_marginBottom="13dp"
+        android:text="Enter the orbital period in days:"
+        app:layout_constraintBottom_toTopOf="@+id/orbitalPeriodTextBox"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/responseTextView" />
+
+    <TextView
+        android:id="@+id/orTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="115dp"
+        android:layout_marginTop="32dp"
+        android:layout_marginEnd="115dp"
+        android:text="Enter the orbital radius of an object orbiting the star in AU."
+        app:layout_constraintBottom_toTopOf="@+id/orbitalRadiusTextBox"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/orbitalPeriodTextBox" />
+
+    <Button
+        android:id="@+id/calculateButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="151dp"
+        android:layout_marginTop="43dp"
+        android:layout_marginEnd="152dp"
+        android:layout_marginBottom="20dp"
+        android:text="Calculate"
+        app:layout_constraintBottom_toTopOf="@+id/resetButton"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/orbitalRadiusTextBox" />
+
+    <Button
+        android:id="@+id/resetButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="162dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="162dp"
+        android:layout_marginBottom="120dp"
+        android:text="Reset"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/calculateButton" />
+
+    <TextView
+        android:id="@+id/responseTextView"
+        android:textSize="7pt"
+        android:layout_width="234dp"
+        android:layout_height="67dp"
+        android:layout_marginStart="88dp"
+        android:layout_marginTop="100dp"
+        android:layout_marginEnd="89dp"
+        android:layout_marginBottom="25dp"
+        app:layout_constraintBottom_toTopOf="@+id/opTextView"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/titleTextView" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
